@@ -6,7 +6,9 @@ import java.util.Scanner;
 /*
     제어문
     1. if, if ~ else, if ~ else if
+        - 가장 보편적이고, 특정부분 및 범위 지정 가능
     2. switch (정수, 정수식, 문자열 - v1.7이상)
+        - 가독성은 좋지만, 특정 지정만 가능함
  */
 public class Control {
 
