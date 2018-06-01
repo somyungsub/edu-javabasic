@@ -102,7 +102,18 @@ public class Control {
                 break;
         }
 
-
+        /*
+            중첩 분기분
+         */
+        if ("Hello".equals(input)) {
+            if (a == b) {
+                System.out.println("Hello 이면서 a와 b는 같다");
+            } else {
+                System.out.println("Hello 이지만 a와 b는 다르다");
+            }
+        } else {
+            System.out.println("Hello가 아닙니다!");
+        }
 
 
 
