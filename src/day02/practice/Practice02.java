@@ -47,6 +47,13 @@ public class Practice02 {
 
 
 
+
+
+
+
+
+
+
             if (dan == 0 && line == 0) {
                 break;
             }
