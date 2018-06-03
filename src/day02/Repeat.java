@@ -23,6 +23,11 @@ public class Repeat {
         for (int i = 0; i < 10; i++) {
             System.out.println(i);
         }
+
+        for (double d = 0.0; d < 10; d = d + 0.5) {
+            System.out.println("ddd" + d);
+        }
+
         System.out.println("--------------------------");
         for (int i = 10; i > 0 ; i--) {
             System.out.println(i);

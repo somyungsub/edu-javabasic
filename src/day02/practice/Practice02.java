@@ -25,35 +25,9 @@ public class Practice02 {
             System.out.print("단수 및 출력 수  입력 [Ex) 5 5, 종료 0 0] :  ");
             int dan = scanner.nextInt();
             int line = scanner.nextInt();
+            // dan == 0, line == 0 -> 무한루프 탈출
 
             // 로직 구현
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             if (dan == 0 && line == 0) {
                 break;
             }

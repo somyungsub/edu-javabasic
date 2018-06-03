@@ -15,6 +15,7 @@ public class Identifier {
          */
         byte b1 = 127;
         byte b2 = -128;
+        byte b3 = 'a';
         System.out.println(b1);
         /*
             short -> 정수형 2바이트

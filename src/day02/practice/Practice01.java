@@ -19,39 +19,15 @@ public class Practice01 {
         Scanner scanner = new Scanner(System.in);
         int num1 = scanner.nextInt();
         int num2 = scanner.nextInt();
-        double result = 0;
         String oper = scanner.next();
+
+        double result = 0;
         /*
-            연산자에 따른 처리로직을 구현하세요. (총 10분)
+            연산자에 따른 처리로직을 구현하세요. (총 5분)
             1. if문
             2. switch 문
          */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        // 로직구현
         if ("+".equals(oper)) {
             result = num1 + num2;
         }

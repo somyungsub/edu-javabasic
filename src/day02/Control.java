@@ -19,13 +19,30 @@ public class Control {
         /*
             if(조건식) - 조건식 : true 또는 false 반환 -> 비교연산자
          */
+
         if(true){
             // 실행문
             System.out.println("항상 참 값");
+            System.out.println();
+            System.out.println();
+
         }
 
         int a = 10;
         int b = 20;
+
+        if (a > b){
+            // 참인경우
+            // 문장에서 {} -> 영역 -> 어떤행위 : 코딩을하여 표현을한다.
+            System.out.println(a);
+
+
+        }else{
+            // 거짓인 경우
+            System.out.println(b);
+
+        }
+
 
         if (a == b) {
             System.out.println("a와 b는 같다");
