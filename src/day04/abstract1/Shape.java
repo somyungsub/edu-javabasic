@@ -7,7 +7,7 @@ public abstract class Shape {
         this.point = point;
     }
 
-    public abstract double area();
+    public abstract double area();  // 하위에서 구현 : 왜냐면 구현방식이 다르므로
     /*
         공통 유틸성 메서드 x, y 합구하기
      */

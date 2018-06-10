@@ -9,13 +9,27 @@ public class Main {
             부모  Shape   (일반, 상위개념) - 추상클래스
             자식  Rectangle, Triangle (구체적, 하위개념)
          */
+//        Shape ss;
+//        if (ss instanceof Triangle) {
+//            ss = new Triangle();
+//        } else {
+//            ss = new Re
+//        } else{
+//                ss = new
+//    }
 
+
+        Shape s = new Triangle(new Point(10,2));
         Rectangle rectangle = new Rectangle(new Point(10, 50));
         Triangle triangle = new Triangle(new Point(3, 5));
 
-        System.out.println(rectangle.area());
-        System.out.println(triangle.area());
+//        System.out.println(rectangle.area());
+//        System.out.println(triangle.area());
+//        System.out.println(triangle.area());
 
+        System.out.println(s.area());
+
+        test2(s);
 
         // 익명 클래스
 //        Shape shape = new Shape(new Point(10,10)) {
@@ -36,5 +50,9 @@ public class Main {
 
 
 
+    }
+
+    private static void test2(Shape shape) {
+        shape.area();
     }
 }

@@ -1,25 +1,25 @@
 package day03.extend1;
 
 public class Person {
-    private String ouathNumber; // 인증번호 (교수번호)
-    private String name;        // 이름
-    private int age;            // 나이
+    private String oauthNumber; // 인증번호 (학번)
+    private String name;    // 이름
+    private int age;        // 나이
 
-    public Person(String ouathNumber, String name, int age) {
-        this.ouathNumber = ouathNumber;
+    public Person() {
+    }
+
+    public Person(String oauthNumber, String name, int age) {
+        this.oauthNumber = oauthNumber;
         this.name = name;
         this.age = age;
     }
 
-    /*
-        공통 메서드
-     */
-    public String getOuathNumber() {
-        return ouathNumber;
+    public String getOauthNumber() {
+        return oauthNumber;
     }
 
-    public void setOuathNumber(String ouathNumber) {
-        this.ouathNumber = ouathNumber;
+    public void setOauthNumber(String oauthNumber) {
+        this.oauthNumber = oauthNumber;
     }
 
     public String getName() {
@@ -36,5 +36,14 @@ public class Person {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "oauthNumber='" + oauthNumber + '\'' +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }

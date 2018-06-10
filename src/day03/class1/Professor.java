@@ -1,6 +1,7 @@
 package day03.class1;
 
 public class Professor {
+
     private String ouathNumber; // 인증번호 (교수번호)
     private String name;        // 이름
     private int age;            // 나이
@@ -18,4 +19,46 @@ public class Professor {
         this.labNumber = labNumber;
     }
 
+
+    public String getOuathNumber() {
+        return ouathNumber;
+    }
+
+    public void setOuathNumber(String ouathNumber) {
+        this.ouathNumber = ouathNumber;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getLabNumber() {
+        return labNumber;
+    }
+
+    public void setLabNumber(String labNumber) {
+        this.labNumber = labNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "Professor{" +
+                "ouathNumber='" + ouathNumber + '\'' +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", labNumber='" + labNumber + '\'' +
+                '}';
+    }
 }

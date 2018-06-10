@@ -1,21 +1,18 @@
 package day03.class1;
 
-public class Student{
+public class Person {
     private String oauthNumber; // 인증번호 (학번)
     private String name;    // 이름
     private int age;        // 나이
-    private int grade;      // 학년
 
-    public Student() {
+    public Person() {
     }
 
-    public Student(String oauthNumber, String name, int age, int grade) {
+    public Person(String oauthNumber, String name, int age) {
         this.oauthNumber = oauthNumber;
         this.name = name;
         this.age = age;
-        this.grade = grade;
     }
-
 
     public String getOauthNumber() {
         return oauthNumber;
@@ -41,21 +38,12 @@ public class Student{
         this.age = age;
     }
 
-    public int getGrade() {
-        return grade;
-    }
-
-    public void setGrade(int grade) {
-        this.grade = grade;
-    }
-
     @Override
     public String toString() {
-        return "Student{" +
+        return "Person{" +
                 "oauthNumber='" + oauthNumber + '\'' +
                 ", name='" + name + '\'' +
                 ", age=" + age +
-                ", grade=" + grade +
                 '}';
     }
 }

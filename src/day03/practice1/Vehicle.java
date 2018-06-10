@@ -32,9 +32,10 @@ public class Vehicle {
     }
 
     public void setOilTankSize(double oilTankSize) {
+
         this.oilTankSize = oilTankSize;
     }
-    
+
     public String toString() {
         return maxWeight + "\t\t" + oilTankSize;
     }
