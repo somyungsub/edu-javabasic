@@ -19,15 +19,31 @@ public class Practice03 {
             3. 100초과 or 0미만(음수) 입력한 경우 프로그램 종료
         */
 
+        Scanner scanner = new Scanner(System.in);
         while (true) {
-            Scanner scanner = new Scanner(System.in);
             System.out.print("점수를 입력하세요 : ");
             int score = scanner.nextInt();
+
+
+
+
+
+
+
+
+
+
+
+
             // 로직 구현
 
+
+            // 100 초과 0 미만인 수가 들어올 경우 반복문을 탈출하여 프로그램 종료
             if (score > 100 || score < 0) {
                 break;
             }
+
+
 
             if (score >= 90 && score <= 100) {
                 System.out.println("A학점 입니다.");

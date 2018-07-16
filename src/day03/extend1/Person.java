@@ -1,5 +1,10 @@
 package day03.extend1;
 
+
+/*
+    상위클래스
+    -> 하위클래스의 공통 부분을 찾아 만듬
+ */
 public class Person {
     private String oauthNumber; // 인증번호 (학번)
     private String name;    // 이름

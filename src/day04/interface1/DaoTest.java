@@ -5,10 +5,12 @@ import java.util.Scanner;
 public class DaoTest {
     public static void main(String[] args) {
 
-//        OracleDao oracleDao = new OracleDao();
+        Dao oracleDao = new PostgreDao();
 
-        // OracleDb -> PostgreDb로 변경 요청!!
-        PostgreDao oracleDao = new PostgreDao();
+//         OracleDb -> PostgreDb로 변경 요청!!
+//        OracleDao oracleDao = new OracleDao();
+//        PostgreDao oracleDao = new PostgreDao();
+
         Scanner scanner = new Scanner(System.in);
 
         while (true) {

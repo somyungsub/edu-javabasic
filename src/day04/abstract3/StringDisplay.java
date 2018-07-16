@@ -27,6 +27,7 @@ public class StringDisplay extends AbstractDisplay {
     public void close() {
         printLine();
     }
+
     private void printLine(){
         System.out.print("+");
         for (int i = 0; i < width; i++) {

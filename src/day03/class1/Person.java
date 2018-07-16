@@ -5,9 +5,11 @@ public class Person {
     private String name;    // 이름
     private int age;        // 나이
 
+    // 디폴트 생성자
     public Person() {
     }
 
+    // 매개변수가 있는 생성자 -> 매개변수는 인스턴스변수 초기화에 대입된다.
     public Person(String oauthNumber, String name, int age) {
         this.oauthNumber = oauthNumber;
         this.name = name;

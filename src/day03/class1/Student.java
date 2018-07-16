@@ -8,7 +8,7 @@ public class Student{
 
     public Student() {
     }
-
+    // 매개변수가 있는 생성자 -> 매개변수는 인스턴스변수 초기화에 대입된다.
     public Student(String oauthNumber, String name, int age, int grade) {
         this.oauthNumber = oauthNumber;
         this.name = name;

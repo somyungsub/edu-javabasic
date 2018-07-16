@@ -12,7 +12,7 @@ public class Practice02 {
             2. 출력 수 입력
             3. 해당 단수까지 각 단수에 대한 출력수를 출력.
 
-            ex) 5 3 입력시
+            ex) 5 5 입력시
             1 x 1 = 1, 1 x 2 = 2 ... , 1 x 5 = 5,
             2 x 1 = 2, 2 x 2 = 4 ... , 2 x 5 = 10,
             3 x 1 = 3, 3 x 2 = 6 ... , 3 x 5 = 15,
@@ -27,13 +27,26 @@ public class Practice02 {
             int line = scanner.nextInt();
             // dan == 0, line == 0 -> 무한루프 탈출
 
+
+
+
+
+
+
+
+
+
+
+
+
+
             // 로직 구현
             if (dan == 0 && line == 0) {
                 break;
             }
             for (int i = 1; i <= dan; i++) {
                 for (int j = 1; j <= line; j++) {
-                    System.out.print(i + " x " + j + " = " + (i * j) + ", ");
+                    System.out.print(i + " x " + j + " = " + (i * j) + ",\t");
                 }
                 System.out.println();
             }

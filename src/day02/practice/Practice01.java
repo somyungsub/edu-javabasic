@@ -21,13 +21,15 @@ public class Practice01 {
         int num2 = scanner.nextInt();
         String oper = scanner.next();
 
-        double result = 0;
-        /*
+
+          /*
             연산자에 따른 처리로직을 구현하세요. (총 5분)
             1. if문
             2. switch 문
          */
+
         // 로직구현
+        double result = 0.0;
         if ("+".equals(oper)) {
             result = num1 + num2;
         }
@@ -46,6 +48,10 @@ public class Practice01 {
         else {
             System.out.println("연산자를 잘못 입력하였습니다.");
         }
+
+
         System.out.println("결과값 : " + result);
     }
+
+
 }

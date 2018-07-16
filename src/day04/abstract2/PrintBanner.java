@@ -20,6 +20,7 @@ public class PrintBanner extends Print {
     // 현재 클라이언트에서 필요로 하는 메서드
     @Override
     public void printWeak() {
+        System.out.println("요청작업 약하게");
         banner.showWithParen();    // 기존에 제공되고 있던 함수 -> Wrapper 하여 클라이언트에 제공
     }
 

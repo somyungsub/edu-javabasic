@@ -5,6 +5,10 @@ package day03.class2;
  */
 public class Main {
     public static void main(String[] args) {
-
+        /*
+            연습해보기!
+            1. 객체생성
+            2. 생성된 객체로 메서드 및 변수 접근해보기
+         */
     }
 }

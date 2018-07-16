@@ -1,5 +1,8 @@
 package day03.class2;
 
+/*
+    사각형, 삼각형에 표현될 객체
+ */
 public class Point {
     private int x;
     private int y;

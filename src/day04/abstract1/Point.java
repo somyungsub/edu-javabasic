@@ -1,8 +1,11 @@
 package day04.abstract1;
 
+/*
+    x
+ */
 public class Point {
-    private int x;  // 중심 x좌표
-    private int y;  // 중심 y좌표
+    private int x;  // 가로길이
+    private int y;  // 세로길이
 
     public Point(int x, int y) {
         this.x = x;

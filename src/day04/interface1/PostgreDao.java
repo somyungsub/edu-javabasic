@@ -1,6 +1,6 @@
 package day04.interface1;
 
-public class PostgreDao {
+public class PostgreDao implements Dao{
     public void insert() {
         System.out.println("PostgreDao insert~~");
     }

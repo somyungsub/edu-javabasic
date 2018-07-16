@@ -1,5 +1,12 @@
 package day03.extend1;
 
+
+
+/*
+    하위클래스 학생
+    - 설명은 Professor 내용과 동일
+ */
+
 public class Student extends Person{
     private int grade;      // 학년
 

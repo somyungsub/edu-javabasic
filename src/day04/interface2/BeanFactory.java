@@ -1,7 +1,8 @@
 package day04.interface2;
 
 public class BeanFactory {
-    public Object getBean(String beanName) {
+
+    public TV getBean(String beanName) {
         if ("samsung".equals(beanName)) {
             return new SamsungTV();
         } else if ("lg".equals(beanName)) {
@@ -10,4 +11,5 @@ public class BeanFactory {
             return null;
         }
     }
+
 }

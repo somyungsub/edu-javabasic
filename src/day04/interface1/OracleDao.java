@@ -1,6 +1,6 @@
 package day04.interface1;
 
-public class OracleDao {
+public class OracleDao implements Dao{
 
     public void insert() {
         System.out.println("OracleDao insert~~");
