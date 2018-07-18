@@ -1,4 +1,22 @@
+
+/*
+    package 문
+    - 이론자료 5장 p.22 참조
+    - 패키지는 간단히 지금 현재 파일의 위치가 속해있는 위치를 명시해줍니다.
+    - src밑에는 package문이 사용될 필요는 없습니다만 패키지를 생성하여 관리할 경우 package문을 명시해주셔야 합니다.
+ */
+
 package day03.exam;
+
+
+/*
+    import 패키지명
+     - 이론자료 5장 p.21 참조
+     - import는 다른파일의 위치(패키지)를 명시하여 그 위치의 자바파일을 사용하기 위함입니다
+     - import를 통해 다른 자바파일을 재사용하며 프로그래밍을 가능하게 해줍니다.
+     - import 문의 위치는 클래스명
+ */
+
 
 /*
     클래스 개념익히기
@@ -76,6 +94,7 @@ public class Test01 { // 이름을 .java파일과 다르게 변경해보세요. 
 
     // 자기자신
     private int d;
+    private String name;
 
     /**
      * 이주석은 javadoc 주석이라합니다. (한글깨짐 방지 옵션 -encoding UTF-8 -charset UTF-8 -docencoding UTF-8)
@@ -131,25 +150,33 @@ public class Test01 { // 이름을 .java파일과 다르게 변경해보세요. 
      */
 
 
-    public void methodName(int a, double b, String s) {
-        System.out.println("괄호안의 변수 a, b, s를 매개변수라합니다.");
-        System.out.println("매개변수란 들어온(인풋) 값을 의미하며 이 데이터를 가지고 아웃풋을 내주면 됩니다.");
-        System.out.println("꼭 아웃풋(리턴값)을 안주고 데이터를 활용하여 실행만해도 가능은합니다 그럴경우 void 를 명시하면됩니다.");
+    public void methodName(int a, double b, String s, int[] arr) {
+        System.out.println("괄호안의 변수 a, b, s, arr를 매개변수라하며 그 앞 int, double, String, int[]은 자료형에 해당합니다.");
 
-        System.out.println("접근지정자가 public 이므로 모든 곳에서 호출 가능 메서드");
+        // 중요 꼭 숙지!! 매개변수의 특성
+        System.out.println("이처럼 매개변수의 타입은 기본타입과 참조타입 전부 받을 수 있으며 " +
+                "int, double 같은 기본타입은 데이터의 값을 전달하며 전달되어 들어온 데이터를 활용하면 됩니다." +
+                "하지만 String, int[](배열)과 같은 객체로 매개변수를 받을때는 주소값을 전달받게 되며 이주소에 접근하여 " +
+                "저장되어 있는 각종 정보에 접근이 가능해집니다. 접근이 가능하다는 것은 거기에 저장된 데이터를 활용하거나 데이터 정보 변경이 가능할 수 있음을 의미합니다.");
 
+        System.out.println("이런 매개변수를 통해 들어온(인풋) 값으로 어떤 로직처리 작업을 하고 난 후 아웃풋을 내주면 됩니다.");
+        System.out.println("꼭 아웃풋(리턴값)을 안주고 데이터를 활용하여 실행만해도 가능은합니다 그럴경우 메서드 정의시 리턴 타입에 void 를 명시하면됩니다.");
+
+        System.out.println("이 메서드는 접근지정자가 public 이므로 모든 곳에서 호출 가능한 메서드!!");
         System.out.println("기본적으로 return 되는 값과 메서드 정의시 return 자료형이 맞아야 합니다!");
+
 //        return;       // 주석풀고 확인 : 가능합니다 어떤 값만 반환을 안한다면!
 //        return 10;    // 주석풀고 확인 : 하지만 이경우는 에러입니다. void로 명시를 했지만 10이란 값을 반환하고 있기 때문입니다. 어떤 값을 반환해도 에러입니다.
     }
 
     // int -> double로 변경하고 return되는 값은 int형이면 가능    -> 왜 가능 할까요? 감이오시나요??
     protected int methodName2(int a) {
-        int kk = 10;
+        int kk = 10;    // 메서드 안에서만 활용되는 변수입니다 -> 이런변수를 로럴변수라하며 이메서드 안에서만 활용되고 사라지게 됩니다. 저장메모리영역은 stack영역입니다.
+
         System.out.println("접근지정자가 protected 이므로 동일패키지 + 상속관계 + 자신 호출가능 메서드");
         System.out.println("a는 매개변수, kk는 로컬변수");
         System.out.println("kk + a를 리턴합니다. return 예약어가 리턴을 하겠다는 예약어입니다. " +
-                "리턴값의 자료형과 메서드에서 메서드 왼쪽에 명시한 자료형이 기본적을 같아야하지만 형변환을 통해 받아들여지기만 한다면 다가능합니다");
+                "리턴값의 자료형과 메서드에서 메서드 왼쪽에 명시한 자료형이 기본적으로 같아야하지만 형변환을 통해 받아들여지기만 한다면 다가능합니다");
         System.out.println("예를들어 methodName2 옆에 int를 double로 바꿔보시면 가능하단걸 이제 이해하실 수 있을겁니다!");
 
         return kk + a;
@@ -170,22 +197,71 @@ public class Test01 { // 이름을 .java파일과 다르게 변경해보세요. 
 //        System.out.println("메서드도 변수처럼 사용법은 클래스명.메서드명이 되며, 클래스간 공유를 하게 됩니다.");
 //    }
 
-    // 이아래 overload 메서드는 에러가 날까요?? 주석을 풀고 확인해보시기 바랍니다!
-//    public void overload() {
+    // 아래 overLoadMethod 메서드는 에러가 날까요?? 주석을 풀고 확인해보시기 바랍니다!
+//    public void overLoadMethod() {
 //        System.out.println("이유??");
 //    }
 
-    public void overload(int a, int b) {
-        System.out.println("여기를 가능하게 바꿔볼까요??");
-        System.out.println("매개변수를 추가하거나 같은위치의 자료형을 바꿔주면 호출시점에서 다르게 인식하고 호출이 가능하게되므로" +
-                "동일한 메서드명으로 같은내용을 담을때 활용됩니다.");
-        System.out.println("예가 지금 println 메서드 입니다. println은 매개변수로 문자, 숫자 등등 데이터를 넣어도 동일하게 출력이 가능합니다.");
+//    public void overLoadMethod(int a, int b) {
+//        System.out.println("여기를 가능하게 바꿔볼까요??");
+//        System.out.println("매개변수를 추가하거나 같은위치의 자료형을 바꿔주면 호출시점에서 다르게 인식하고 호출이 가능하게되므로" +
+//                "동일한 메서드명으로 같은내용을 담을때 활용됩니다.");
+//        System.out.println("예가 지금 println 메서드 입니다. println은 매개변수로 문자, 숫자 등등 데이터를 넣어도 동일하게 출력이 가능합니다.");
+//    }
+//
+//    public void overLoadMethod(int a, String s) {
+//        System.out.println("갯수는 같지만 2번째 자료형이 다르므로, 호출시 다르게 인식이되어 구분이 가능합니다.");
+//    }
+
+
+    /*
+        3. 생성자 (이론자료 5장 p.14~15 참조)
+        - 생성자란 객체 생성시 호출되는 특별한 메서드라고 보시면 됩니다.
+        - 메서드와 같은 형식을 취하지만, 리턴이 없으며, 이름은 클래스명과 같아야 합니다.
+
+        * 리턴타입 예를 들면 int나 double 등등의 자료형을 명시하면 메서드가 되므로 주의하셔야합니다!!
+     */
+
+    /*
+        기본생성자 - 디폴트생성자라고 함.
+        - 매개변수가 없는 생성자
+        - 기본생성자 외는 그냥 생성자라고 합니다.
+        - 생성자를 작성하지 않을 경우 내부적으로 자동생성된다해서 디폴트or기본생성자라 부릅니다.
+     */
+    public Test01() {
+        System.out.println("new연산자를 통해 Test01의 객체를 생성시에 호출되는 특별한 메서드! -> 생성자");
+        System.out.println("지금처럼 매개변수가 없는 경우를 기본 or 디폴트생성자라 합니다.");
+        System.out.println("객체 생성과 동시에 호출되므로 보통은 멤버변수의 초기화작업 및 생성과동시에 해야할 작업들을 명시합니다.");
     }
 
+    /*
+        생성자
+        - 생성자도 오버로딩이 가능합니다.
+        - 하는 방법은 특별한 메서드 이므로 메서드와 동일한 방식을 취합니다
+          즉, 매개변수를 통해 오버로딩을 할 수있고, 때에 따라서 각각 다른 생성자를 호출 할 수 있습니다!!
+     */
+    public Test01(int a){
+        System.out.println("매개변수 1개 ");
+        System.out.println("아래 this 키워드는 지금 현재 작업되고 있는 파일의 객체를 가르킵니다");
+        System.out.println("즉 현재 Test01 파일에서 작업을 하고 있으므로 this는 Test01을 가르킵니다.");
 
-    public void overload(int a, String s) {
+        // 데이터 초기화 작업
+        this.a = a;     // this.a는 Test01의 a 변수를 가르킵니다. 즉 this.a에 매개변수 a의 데이터를 넣습니다.
+//        a = a;  // 이것은 어떤 의미일까요????   -> 변수의 우선순위 접근 예상해보기
+    }
+
+    public Test01(int a, int b) {
+        System.out.println("매개변수 2개");
+        System.out.println("지금처럼 멤버변수(클래스안의 정의된변수)를 초기화하는데 활용되며, 객체생성시 매개변수로 전달된 데이터를 가지고 처리합니다");
+        this.a = a;
+        this.b = b;
 
     }
 
+    public Test01(int a, int b, String name) {
+        this(a,b);  // 생각해보기 -> 얘가 가르키는 곳은 ??
+        this.name = name;
+        System.out.println("매개변수 3개");  // this(a,b)보다 위에 있으면 에러가 납니다! 문법적
+    }
 
 }
