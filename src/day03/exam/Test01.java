@@ -189,6 +189,7 @@ public class Test01 { // 이름을 .java파일과 다르게 변경해보세요. 
 
 
     // 변수처럼 메서드도 접근지정자+일반지정자 혼합이 가능할까요??? -> 생각해보신 후 method4 주석을 풀어보시기 바랍니다
+
 //    public static void method4() {
 //        System.out.println("네 가능합니다. public static int a 와 같은 변수는 클래스 변수여서 클래스간 공유를 한다고 했습니다. " +
 //                "객체 생성없이 변수 사용이 가능했었죠. 사용법은 클래스명.변수명 이였습니다.");
@@ -197,21 +198,57 @@ public class Test01 { // 이름을 .java파일과 다르게 변경해보세요. 
 //        System.out.println("메서드도 변수처럼 사용법은 클래스명.메서드명이 되며, 클래스간 공유를 하게 됩니다.");
 //    }
 
-    // 아래 overLoadMethod 메서드는 에러가 날까요?? 주석을 풀고 확인해보시기 바랍니다!
-//    public void overLoadMethod() {
-//        System.out.println("이유??");
-//    }
 
+
+    // 아래 overLoadMethod 메서드는 에러가 날까요?? 주석을 풀고 확인해보시기 바랍니다!
+
+//    public void overLoadMethod() {
+//        System.out.println("오버로딩1");
+//    }
+//
 //    public void overLoadMethod(int a, int b) {
+//        System.out.println("오버로딩2 a + b ->" + (a + b));
 //        System.out.println("여기를 가능하게 바꿔볼까요??");
 //        System.out.println("매개변수를 추가하거나 같은위치의 자료형을 바꿔주면 호출시점에서 다르게 인식하고 호출이 가능하게되므로" +
 //                "동일한 메서드명으로 같은내용을 담을때 활용됩니다.");
-//        System.out.println("예가 지금 println 메서드 입니다. println은 매개변수로 문자, 숫자 등등 데이터를 넣어도 동일하게 출력이 가능합니다.");
+//        System.out.println("예가 출력시 자주 사용하던 println 메서드 입니다. println은 매개변수로 문자, 숫자 등등 데이터를 넣어도 동일하게 출력이 가능합니다.");
 //    }
 //
 //    public void overLoadMethod(int a, String s) {
+//        System.out.println("오버로딩3 a + s ->" + (a + s));
 //        System.out.println("갯수는 같지만 2번째 자료형이 다르므로, 호출시 다르게 인식이되어 구분이 가능합니다.");
 //    }
+
+
+    // 오버로딩 : 실무에서 자주 쓰이는 기법중 한 예입니다.
+    public int plus(int a, int b) {
+        return a + b;
+    }
+
+    public int plus(int a, int b, int c) {
+        return plus(a, b) + c;
+    }
+
+    public int plus(int a, int b, int c, int d) {
+        return plus(a, b, c) + d;
+    }
+
+    // 하지만 위 같은 형식은 매개변수를 배열로 받을 수 있으므로  해당 메서드로 표현이 다 가능하겠죠?? 위 예시는 오버로딩 개념을 익히기 위한 예시로 보시면 됩니다.
+    public int plus(int[] arr) {
+        int sum = 0;
+
+        // 반복문 때 잠깐 소개 해드린 foreach 문입니다. 순차 탐색을 하여 데이터를 활용해야하는 경우 사용을 하시면 됩니다!
+        for (int i : arr) {
+            sum += i;
+        }
+
+        /// 위 foreach 문과 동일한 내용의 for문입니다! 기억이 안나신다면 여기에서 다시한번 숙지해보시기 바랍니다!!
+//        for (int i = 0; i < arr.length; i++) {
+//            sum += arr[i];
+//        }
+
+        return sum;
+    }
 
 
     /*
@@ -261,7 +298,7 @@ public class Test01 { // 이름을 .java파일과 다르게 변경해보세요. 
     public Test01(int a, int b, String name) {
         this(a,b);  // 생각해보기 -> 얘가 가르키는 곳은 ??
         this.name = name;
-        System.out.println("매개변수 3개");  // this(a,b)보다 위에 있으면 에러가 납니다! 문법적
+        System.out.println("매개변수 3개");  // this(a,b)보다 위에 있으면 에러가 납니다!
     }
 
 }
