@@ -1,4 +1,4 @@
-package day03.extend2;
+package day03.exam.extend2;
 
 
 public class Triangle extends Shape{

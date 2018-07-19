@@ -1,15 +1,17 @@
-package day03.class1;
+package day03.exam.extend1;
 
+/*
+    상위클래스
+    -> 하위클래스의 공통 부분을 찾아 만듬
+ */
 public class Person {
     private String oauthNumber; // 인증번호 (학번)
     private String name;    // 이름
     private int age;        // 나이
 
-    // 디폴트 생성자
     public Person() {
     }
 
-    // 매개변수가 있는 생성자 -> 매개변수는 인스턴스변수 초기화에 대입된다.
     public Person(String oauthNumber, String name, int age) {
         this.oauthNumber = oauthNumber;
         this.name = name;

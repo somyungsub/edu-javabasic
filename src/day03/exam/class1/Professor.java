@@ -1,4 +1,4 @@
-package day03.class1;
+package day03.exam.class1;
 
 public class Professor {
 

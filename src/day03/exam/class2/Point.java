@@ -1,4 +1,4 @@
-package day03.class2;
+package day03.exam.class2;
 
 /*
     사각형, 삼각형에 표현될 객체

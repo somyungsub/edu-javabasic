@@ -1,4 +1,4 @@
-package day03.class2;
+package day03.exam.class2;
 
 /*
     도형관련 객체 만들어보기

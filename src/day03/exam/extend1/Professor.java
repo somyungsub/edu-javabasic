@@ -1,4 +1,4 @@
-package day03.extend1;
+package day03.exam.extend1;
 
 /*
     하위클래스 교수

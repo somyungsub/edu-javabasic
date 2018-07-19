@@ -1,4 +1,4 @@
-package day03.exam;
+package day03.exam.basic;
 
 
 public class Main {
@@ -59,6 +59,7 @@ public class Main {
         test.methodName2(10);
         test2.methodName2(10);
 
+
         // Test01의 method4 주석을 푼 후 아래 주석을 풀고 테스트 해보시기 바랍니다.
         // Test01.method4();
 
@@ -89,11 +90,12 @@ public class Main {
         /*
             6. 메서드 체인
             - 메서드를 이어 나가는 행위입니다.
-            - 대표적인 예가 StringBuffer 클래스의 append 함수 입니다. append 함수는
+            - 대표적인 예가 StringBuffer 클래스의 append 함수 입니다.
+            - append 함수는 매개변수로 들어온 데이터를 더하고 StringBuffer 객체를 리턴함으로써 이어나갈 수 있습니다
          */
         System.out.println("---------------메서드 체인-----------------");
-        new Test01().plus(10,20);
-        new Test01(10).methodName2(2);
+        new Test01().plus(10,20);       // new 연산자로 Test01크래스 객체 생성 후 바로 plus 메서드호출
+        new Test01(10).methodName2(2);  // new 연산자로 Test01클래스 객체 생성 후 바로 methodName2 메서드 호출
 
         System.out.println("---------------메서드 체인2-----------------");
         System.out.println(new StringBuffer().append(10).append(" + ").append(20).append(" = ").append(30).toString()); // StringBuffer

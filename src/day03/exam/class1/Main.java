@@ -1,4 +1,4 @@
-package day03.class1;
+package day03.exam.class1;
 
 /*
     학교 관련 객체 만들어보기

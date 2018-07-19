@@ -6,7 +6,7 @@
     - src밑에는 package문이 사용될 필요는 없습니다만 패키지를 생성하여 관리할 경우 package문을 명시해주셔야 합니다.
  */
 
-package day03.exam;
+package day03.exam.basic;
 
 
 /*
