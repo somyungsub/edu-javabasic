@@ -1,4 +1,4 @@
-package day03.exam.class2;
+package day03.practice.class1;
 
 public class Triangle {
     private Point point;    // x, y길이

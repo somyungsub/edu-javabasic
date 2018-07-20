@@ -1,4 +1,4 @@
-package day03.practice1;
+package day03.practice;
 
 public class VehicleTest {
 

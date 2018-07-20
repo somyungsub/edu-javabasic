@@ -13,8 +13,8 @@ public class Main {
     public static void main(String args[]){
 
         // 생성자의 생성여부 확인
-        DBConection obj1 = DBConection.getInstance();
-        DBConection obj2 = DBConection.getInstance();
+        DBConnection obj1 = DBConnection.getInstance();
+        DBConnection obj2 = DBConnection.getInstance();
         System.out.println(obj1);
 
         // 주소 값이 같은지 확인 == 비교연산자는 내부적으로 Object클래스의 toString()호출 -> hashCode() 메서드를 통해 값 비교를 함

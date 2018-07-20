@@ -1,4 +1,4 @@
-package day03.practice1;
+package day03.practice;
 
 public class Vehicle {
     private int maxWeight;      // 최대 적재 중량

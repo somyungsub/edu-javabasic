@@ -6,15 +6,18 @@ public class Student{
     private int age;        // 나이
     private int grade;      // 학년
 
+    // 다른 생성자 작성시 기본생성자는 필수작성하는 습관!
     public Student() {
     }
-    // 매개변수가 있는 생성자 -> 매개변수는 인스턴스변수 초기화에 대입된다.
+
+    // 매개변수가 있는 생성자 -> 매개변수는 멤버변수 초기화에 대입된다.
     public Student(String oauthNumber, String name, int age, int grade) {
         this.oauthNumber = oauthNumber;
         this.name = name;
         this.age = age;
         this.grade = grade;
     }
+
 
 
     public String getOauthNumber() {
@@ -48,6 +51,7 @@ public class Student{
     public void setGrade(int grade) {
         this.grade = grade;
     }
+
 
     @Override
     public String toString() {

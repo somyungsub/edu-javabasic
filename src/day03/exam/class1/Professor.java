@@ -52,13 +52,16 @@ public class Professor {
         this.labNumber = labNumber;
     }
 
-    @Override
-    public String toString() {
-        return "Professor{" +
-                "ouathNumber='" + ouathNumber + '\'' +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", labNumber='" + labNumber + '\'' +
-                '}';
-    }
+    /*
+        Main에서 오버라이딩을 안한 경우 호출되는 내용을 살피기 위해 주석처리했습니다.
+     */
+//    @Override
+//    public String toString() {
+//        return "Professor{" +
+//                "ouathNumber='" + ouathNumber + '\'' +
+//                ", name='" + name + '\'' +
+//                ", age=" + age +
+//                ", labNumber='" + labNumber + '\'' +
+//                '}';
+//    }
 }

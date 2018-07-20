@@ -19,9 +19,6 @@ public class Main {
                포함 관계상 상위클래스타입(Person)은 하위클래스(Student, Professor)를 받을 수 있다.
          */
 
-        /*
-            다형성의
-         */
         Person person = new Student("1111", "김교수", 23, 4);
         Person person2 = new Professor("1111", "김교수", 23, "G10101");
 
@@ -29,10 +26,8 @@ public class Main {
         Person person1 = new Person("1111", "김교수", 25);
         Student student = new Student("1111", "김교수", 23, 4);
         Professor professor = new Professor("1111", "김교수", 55, "G100");
-//        test(person1, student, professor);
-//        test(student, student, professor);
-//        test(professor, student, professor);
 
+        System.out.println("---- 다형성 활용 -----");
         test(student);
         test(professor);
 //        System.out.println(student);
@@ -64,11 +59,10 @@ public class Main {
         if (pr instanceof Student) {
             Student st = (Student)pr;       // 명시적형변환   -> 용어로는 다운캐스팅이라 합니다
                                             //                  (상위개념이 하위개념으로 반환되어 하위의 정보를 얻어야 할 때)
-            System.out.println("학생입니다" + st.getGrade());
-            System.out.println("학생입니다" + ((Student)pr).getGrade());
+            System.out.println("학생입니다 " + st.getGrade());
         } else if (pr instanceof Professor) {
             Professor p = (Professor)pr;    // 명시적 형변환  -> 용어로는 다운캐스팅이라 합니다
-            System.out.println("교수입니다" + p.getLabNumber());
+            System.out.println("교수입니다 " + p.getLabNumber());
         }
     }
 

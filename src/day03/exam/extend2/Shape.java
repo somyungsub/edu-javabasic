@@ -21,4 +21,10 @@ public class Shape {
     public void setPoint(Point point) {
         this.point = point;
     }
+
+    // 오버라이딩 대상
+    public double area() {
+        System.out.println("Shape area 메서드");
+        return 0.0;
+    }
 }
