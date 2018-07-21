@@ -40,13 +40,14 @@ public class Main {
         int temp1 = num1 > num2 ? num1 : num2;  // 큰수
         int temp2 = num1 > num2 ? num2 : num1;  // 작은수
 
+        // 유클리드 호제법 : 최대공약수
         while (temp2 > 0) {
             gcd = temp1;
             temp1 = temp2;
             temp2 = gcd % temp2;
         }
         gcd = temp1;
-        lcm = num1 * num2 / gcd;
+        lcm = num1 * num2 / gcd; // 최소공배수
 
         System.out.println("최대공약수 : " + gcd);
         System.out.println("최소공배수 : " + lcm);

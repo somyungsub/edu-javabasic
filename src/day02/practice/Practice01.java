@@ -1,11 +1,12 @@
 package day02.practice;
 
+import day03.exam.basic.Test03;
+
 import java.util.Scanner;
 
 public class Practice01 {
 
     public static void main(String[] args) {
-
         /*
             간단한 계산기 만들기.
              1. 두수와 산술연산자를 입력.

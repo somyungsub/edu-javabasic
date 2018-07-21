@@ -1,4 +1,4 @@
-package day03.practice;
+package homework.day03.h1;
 
 public class Car extends Vehicle {
     private double restOil;        // 현재 탱크에 남은 오일 

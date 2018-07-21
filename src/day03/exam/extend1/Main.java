@@ -19,23 +19,28 @@ public class Main {
                포함 관계상 상위클래스타입(Person)은 하위클래스(Student, Professor)를 받을 수 있다.
          */
 
-        Person person = new Student("1111", "김교수", 23, 4);
-        Person person2 = new Professor("1111", "김교수", 23, "G10101");
+        System.out.println("---- 각 클래스에 따른 동적바인딩 후 오버라이딩 메서드(toString) 확인 -----");
+        System.out.println("---- extend2 패키지에서 자세히 설명. 여기서는 확인만! -----");
+        Person person = new Student("1111", "김학생", 23, 4);
+        Person person2 = new Professor("1111", "김교수", 23, "G101");
+        System.out.println(person);     // 출력 내용은?
+        System.out.println(person2);    // 출력 내용은?
 
-        // 타입을 맞춰준 예 -> 상속이 없는 경우 기본적인 자바의 자료형 통일 방식
-        Person person1 = new Person("1111", "김교수", 25);
-        Student student = new Student("1111", "김교수", 23, 4);
+        /*
+            타입을 맞춰준 예
+             - 상속이 없는 경우 기본적인 자바의 자료형 통일 방식
+         */
+        Student student = new Student("1111", "김학생", 23, 4);
         Professor professor = new Professor("1111", "김교수", 55, "G100");
 
-        System.out.println("---- 다형성 활용 -----");
-        test(student);
-        test(professor);
-//        System.out.println(student);
-//        System.out.println(professor);
-//
-//        student.getName();
-//        professor.getName();
-//        System.out.println(person1);
+        System.out.println("---- 매개변수 넘길 때 다형성 활용 -----");
+        test(student);      // 지금은 상속관계이므로 가능
+        test(professor);    // 지금은 상속관계이므로 가능
+
+        System.out.println("--- 주석을 풀기전 에러가 나는지, 에러가안난다면 내용 예상해보기 ---");
+//        test(person);
+//        test(person2);
+
     }
 
     /*
@@ -55,22 +60,82 @@ public class Main {
 
      */
     private static void test(Person pr) {
-        System.out.println(pr.getAge());
         if (pr instanceof Student) {
             Student st = (Student)pr;       // 명시적형변환   -> 용어로는 다운캐스팅이라 합니다
                                             //                  (상위개념이 하위개념으로 반환되어 하위의 정보를 얻어야 할 때)
-            System.out.println("학생입니다 " + st.getGrade());
+            System.out.println("이름 : " + st.getName());
+            System.out.println("나이 : " + st.getAge());
+            System.out.println("학생 학년 : " + st.getGrade());
         } else if (pr instanceof Professor) {
             Professor p = (Professor)pr;    // 명시적 형변환  -> 용어로는 다운캐스팅이라 합니다
-            System.out.println("교수입니다 " + p.getLabNumber());
+            System.out.println("이름 :" + p.getName());
+            System.out.println("나이 :" + p.getAge());
+            System.out.println("교수 연구실 : " + p.getLabNumber());
         }
     }
 
+    /*
+        리팩토링 해보기
+         - 위 test메서드에 보시면 중복성 코드가 보입니다.
+         - 위 test메서드를 복사 후 아래에 붙여넣기 하신후 위메서드는 주석처리하고 변경해봅시다.
+         - 맨 아래 내용 확인가능! 꼭 해보시고 확인해보기
+     */
 
-//    private static void test(Student pr) {
-//        System.out.println(pr.getAge());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // 리팩토링 -> 중복코드 통일
+//    private static void test(Person pr) {
+//
+//        // 상위클래스 내용 확인
+//        System.out.println("이름 : " + pr.getName());
+//        System.out.println("나이 : " + pr.getAge());
+//
+//        // 하위클래스 별 내용 확인
+//        if (pr instanceof Student) {
+//            Student st = (Student)pr;       // 명시적형변환   -> 용어로는 다운캐스팅이라 합니다
+//                                            //                  (상위개념이 하위개념으로 반환되어 하위의 정보를 얻어야 할 때)
+//            System.out.println("학생 학년 : " + st.getGrade());
+//        } else if (pr instanceof Professor) {
+//            Professor p = (Professor)pr;    // 명시적 형변환  -> 용어로는 다운캐스팅이라 합니다
+//            System.out.println("교수 연구실 : " + p.getLabNumber());
+//        }
 //    }
-//    private static void test(Professor pr) {
-//        System.out.println(pr.getAge());
-//    }
+
 }

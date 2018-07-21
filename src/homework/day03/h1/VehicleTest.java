@@ -1,12 +1,9 @@
-package day03.practice;
+package homework.day03.h1;
 
 public class VehicleTest {
 
 	public static void main(String[] args) {
 
-	    /*
-	        20 ~ 30분
-	     */
 		Truck car = new Truck(1000, 100, 5);
         // 초기 트럭의 정보를 출력한다.
         System.out.println("최대적재중량 \t 오일탱크크기 \t 잔여오일량 \t 현재적재중량 \t 연비");
