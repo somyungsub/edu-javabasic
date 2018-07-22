@@ -24,7 +24,6 @@ public class Main2 {
 //            }
 //            System.out.println();
 //        }
-
         // 알고리즘 구현
         for (int i = 0; i < num; i++) { // i는 번째의 순서를 나타내게 끔 구현
             for (int j = 0; j < num / 2; j++) {

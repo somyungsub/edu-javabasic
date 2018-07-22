@@ -27,7 +27,7 @@ public class Test04 {
 
     }
 
-    // 주석을 풀면 에러가 발생해요.. 같은 내용으로 인식하기 떄문입니다.
+    // 주석을 풀면 에러가 발생해요.. 위의 test(String... strings)메서드와 같은 내용으로 인식하기 떄문입니다. 즉 매개변수를 동일하게 인식하고 있습니다.
 //    public void test(String[] strings) {
 //        System.out.println("에러!");
 //    }

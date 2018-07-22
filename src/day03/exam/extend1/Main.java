@@ -56,10 +56,9 @@ public class Main {
 
            이런경우 Person[]에 Student와 Professor.. 이후 다른 하위클래스가 추가된다면... 그 부분까지 해서
            처리할 수도 있고, 때에 따라 방향성을 잡으셔야 합니다.
-
-
      */
     private static void test(Person pr) {
+
         if (pr instanceof Student) {
             Student st = (Student)pr;       // 명시적형변환   -> 용어로는 다운캐스팅이라 합니다
                                             //                  (상위개념이 하위개념으로 반환되어 하위의 정보를 얻어야 할 때)
@@ -77,7 +76,7 @@ public class Main {
     /*
         리팩토링 해보기
          - 위 test메서드에 보시면 중복성 코드가 보입니다.
-         - 위 test메서드를 복사 후 아래에 붙여넣기 하신후 위메서드는 주석처리하고 변경해봅시다.
+         - 위 test메서드를 복사 후 아래에 붙여넣기 하신후 위 test메서드는 주석처리하고 변경해봅시다.
          - 맨 아래 내용 확인가능! 꼭 해보시고 확인해보기
      */
 

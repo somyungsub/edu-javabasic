@@ -58,6 +58,8 @@ public class Practice04 {
             System.out.print("수 입력 : ");
             int answer = scanner.nextInt();
 
+
+
             // 생성 수 > 입력 수
             if (randomNum > answer) {
                 System.out.println("Up!!");

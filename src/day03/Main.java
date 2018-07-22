@@ -7,5 +7,9 @@ public class Main {
         Test01 test01 = new Test01();
         System.out.println(Test01.classVariable);   // public static 접근
         System.out.println(test01.a);   // public 접근
+
+
+        day03.Test01 t = new day03.Test01();
+
     }
 }

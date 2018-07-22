@@ -1,8 +1,8 @@
 package day03.exam.extend2;
 
 public class Point {
-    private int x;  // 중심 x좌표
-    private int y;  // 중심 y좌표
+    private int x;  // 가로
+    private int y;  // 세로
 
     public Point(int x, int y) {
         this.x = x;

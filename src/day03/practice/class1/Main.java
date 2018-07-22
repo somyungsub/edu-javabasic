@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         /*
-            연습해보기!
+            연습해보기! (상속x)
             1. Rectangle 과 Triangle 객체를 생성하여
             2. 각 객체의 가로 세로의 길이를 입력받고 넓이 구하기.
             3. 가로세로의 길이는 Point 클래스에 정의하여 Rectangle과 Triangle 클래스에서 has a 관계(집합관계)를 맺어 활용합니다.

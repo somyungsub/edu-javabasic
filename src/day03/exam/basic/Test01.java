@@ -135,6 +135,7 @@ public class Test01 { // 이름을 .java파일과 다르게 변경해보세요. 
 
     // 접근지정자 + (일반지정자 final + static)
     public final static int staticFinalValue = 10;    // 모든곳 접근, 변경불가 + 클래스공유
+    protected final static int staticFinalValue2 = 10;    // 모든곳 접근, 변경불가 + 클래스공유
 
 
     /*
@@ -156,7 +157,6 @@ public class Test01 { // 이름을 .java파일과 다르게 변경해보세요. 
 
     public void methodName(int a, double b, String s, int[] arr) {
         System.out.println("괄호안의 변수 a, b, s, arr를 매개변수라하며 그 앞 int, double, String, int[]은 자료형에 해당합니다.");
-
         // 중요 꼭 숙지!! 매개변수의 특성
         System.out.println("이처럼 매개변수의 타입은 기본타입과 참조타입 전부 받을 수 있으며 " +
                 "int, double 같은 기본타입은 데이터의 값을 전달하며 전달되어 들어온 데이터를 활용하면 됩니다." +
@@ -296,13 +296,13 @@ public class Test01 { // 이름을 .java파일과 다르게 변경해보세요. 
         System.out.println("지금처럼 멤버변수(클래스안의 정의된변수)를 초기화하는데 활용되며, 객체생성시 매개변수로 전달된 데이터를 가지고 처리합니다");
         this.a = a;
         this.b = b;
-
     }
 
     public Test01(int a, int b, String name) {
         this(a,b);  // 생각해보기 -> 얘가 가르키는 곳은 ??
         this.name = name;
         System.out.println("매개변수 3개");  // this(a,b)보다 위에 있으면 에러가 납니다!
+        System.out.println("name : " + name);
     }
 
 }

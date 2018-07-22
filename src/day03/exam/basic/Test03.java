@@ -21,7 +21,7 @@ public class Test03 {
         }
     }
 
-    // 내부에 이렇게 객체를 생성하여 사용 ㅓ가능
+    // 내부에 이렇게 객체를 생성하여 사용 가능
     private Inner03 inner03 = new Inner03();
 
     // Test03 클래스에 메서드를 활용하여 inner클래스를 Test03에서만 활용

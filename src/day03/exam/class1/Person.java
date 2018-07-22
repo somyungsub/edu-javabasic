@@ -67,7 +67,7 @@ public class Person {
      */
 
     @Override
-    public String toString() {
+    public String toString() {  // Object 클래스의 toString()을 오버라이딩
         return "Person{" +
                 "oauthNumber='" + oauthNumber + '\'' +
                 ", name='" + name + '\'' +

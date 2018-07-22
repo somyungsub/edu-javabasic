@@ -5,26 +5,15 @@ import java.util.Scanner;
 public class Practice07 {
     public static void main(String[] args) {
         /*
-            10분
+            day02.practice의 Practice07 문제에서 자료구조를 변경해서 활용해봤습니다.
+            - 과목배열 : String[]
+            - 점수배열 : int[]
 
-            입력 ex) 과목입력 : 영어  / 점수 입력 : 100 ...
-            출력 ex) 영어 : 100  / 수학 : 85 ...
-            1. 합산점수
-            2. 평균점수
-            3. 랭킹 출력
+            위 두 배열의 데이터를 Subject 클래스의 데이터로 넣고 Subject[]을 만들어서 (클래스배열 or 객체배열이라 함)
+            로직 변경해보기
          */
         Scanner scanner = new Scanner(System.in);
         int size = 3;
-
-
-        // Subject 클래스를 만들어서 배열로 선언한 후 로직 변경해보기
-
-
-
-
-
-
-
 
         // 입력작업
         Subject[] subjects = new Subject[size];

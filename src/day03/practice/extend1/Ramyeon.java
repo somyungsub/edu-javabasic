@@ -47,7 +47,7 @@ public class Ramyeon {
 
 
 
-    // 공통메서드로 하위에서 호출하여 활용
+    // 공통메서드로 하위클래스에서 호출하여 활용
 //    protected void explainRamyeon() {
 //        if ("신라면".equals(name)) {
 //            System.out.println("신라면은 맵습니다....추가재료를 넣으면 괜찮아 질겁니다.");
