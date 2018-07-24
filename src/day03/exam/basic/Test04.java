@@ -6,8 +6,8 @@ import static java.lang.Math.*;
 public class Test04 {
     public void test() {
 
-        out.println("System의 static 멤버를 선언하여 활용 하면 System.out.println 에서 System을 생략할 수 있다");
-        out.println("Math 또한 저렇게 static import 문을 사용할 경우 static멤버들은 생략하여 사용이 가능한다");
+        out.println("System의 static 멤버를 선언하여 활용 하면 System.out.println 에서 System을 생략할 수 있습니다.");
+        out.println("Math 또한 저렇게 static import 문을 사용할 경우 static멤버들은 생략하여 사용이 가능합니다.");
         out.println("random 메서드 : " + random()); // 0~1사이의 값을 랜덤발생
         out.println("2의 10승 " + pow(2,10));         // 2의 10승
         out.println("2의 10승 " + Math.pow(2,10));    // 2의 10승
@@ -17,7 +17,7 @@ public class Test04 {
 
     // 가변인자
     public void test(String... strings) {
-        System.out.println("String... 와 String[]은 동일합니다. 그냥 배열을 다르게 표현한 방식이라 보시면되지만");
+        System.out.println("매개변수에서 자료형 String... 와 String[]은 동일합니다. 그냥 배열을 다르게 표현한 방식이라 보시면되지만");
         System.out.println("차이점은 이 메서드를 호출할 때 매개변수로 넘기는 형태입니다.");
 
         out.println("주의하셔아 할 점은 가변인자를 사용할 경우 항상 맨 끝에 선언이 되어야 합니다. " +

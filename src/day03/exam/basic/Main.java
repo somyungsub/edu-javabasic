@@ -10,7 +10,6 @@ public class Main {
         Test01 test = new Test01();     // 디폴트로 객체 생성
         Test01 test2 = new Test01(10, 20);    // 매개변수 2개 짜리 객체 생성
 
-
         /*
             1. 멤버변수 접근
              -> 접근 가능한 이유 생각해보기!
@@ -53,7 +52,7 @@ public class Main {
         /*
             3. 메서드 호출해보기
              - methodName3은 호출이 안됩니다!!  -> 이유는~? 힌트 접근지정자를 잘 살펴보세요
-             - 사용법 : 객체변수.메서드명 입니다.
+             - 사용법 : 참조변수.메서드명 입니다.
          */
         System.out.println("---------------메서드 호출하기-----------------");
         test.methodName2(10);
@@ -66,21 +65,22 @@ public class Main {
              - 사용법 : 클래스명.메서드명
              - 이렇게 가능한 이유는 ? 메모리영역 로딩 시점을 잘 생각해보시기 바랍니다.
                static 지정자는 프로그램 실행시점에 로딩이 되어 클래스간 공유를 하게 된다고 했습니다.
-               메서드에 static 지정자를 사용할 경우 new 연산자를 안하고,
-               즉 객체를 생성하지 않아도 메서드를 호출 할 수 있게 해줍니다.
+               메서드에 static 지정자를 사용할 경우 new 연산자로 객체를 생성 하지 않고, 바로 메서드를 호출 할 수 있습니다.
+
              - 자주 호출되고 일반성이 강한 경우에 static 으로 지정해주면 메모리 할당면에서 이익을 볼 수 있겠죠??
                Math.pow 같은 경우 pow가 static이 아니라면 Math클래스를 매번 new연산자로 생성후 사용을 해야할 겁니다.
                하지만 static으로 지정해놨기 때문에 Math 클래스를 객체생성없이 그냥 Math.pow로 사용을 할 수 있습니다.
                이 차이점을 이해 하시는게 중요하며, 혹시 이해 안되시면 꼭 질문 주세요
          */
-//         Test01.method4();
-        Math.pow(10,2); // pow에 커서를 올려놓고 f3키 클릭  -> 해당 메서드로 이동이 가능
+//         Test01.method4();    // 주석풀어보기 (static 메서드 사용 예)
+        Math.pow(10,2); // pow에 커서를 올려놓고 f3키 클릭  -> 해당 메서드로 이동이 가능 -> static 지정자 확인
 
 
         /*
             4. 오버로딩 메서드!
             - Test01의 overLoadMethod 메서드 주석을 푼 후 확인 해보시기 바랍니다!
-            - 동일한 작업을 해야하는데 매개변수의 차이가 생길 경우 오버로딩을 활용하시면 됩니다.
+            - 동일한 의미 or 내용의 작업을 해야하는데 매개변수의 차이가 생길 경우 오버로딩을 활용하시면 됩니다.
+              ex) 매개변수 2개로 더하기, 3개로 더하기, 4개 더하기 ... 더하기 작업을 매개변수 받는 수에 따라 동일 작업을 해야하는 경우
          */
         System.out.println("---------------오버로딩 메서드-----------------");
 //        test.overLoadMethod();
@@ -99,8 +99,8 @@ public class Main {
             - 동일한 명으로 가능한이유는 >> 오버로딩이 된 예라고 보시면 됩니다.
          */
         System.out.println("-------------- 생성자 확인 ------------------");
-        new Test01();
-        new Test01(10);
+        new Test01();       // 기본생성자
+        new Test01(10); // 매개변수 1개인 생성자
 
         /*
             ** 추가내용 **
@@ -118,6 +118,6 @@ public class Main {
         new Test01(10).methodName2(2);  // new 연산자로 Test01클래스 객체 생성 후 바로 methodName2 메서드 호출
 
         System.out.println("---------------메서드 체인2-----------------");
-        System.out.println(new StringBuffer().append(10).append(" + ").append(20).append(" = ").append(30).toString()); // StringBuffer
+        System.out.println(new StringBuffer().append(10).append(" + ").append(20).append(" = ").append(30).toString()); // 10 + 20 = 30 이 출력됩니다.
     }
 }

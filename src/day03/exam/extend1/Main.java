@@ -33,13 +33,14 @@ public class Main {
         Student student = new Student("1111", "김학생", 23, 4);
         Professor professor = new Professor("1111", "김교수", 55, "G100");
 
+        System.out.println("---- test함수는 Main 클래스 의 메서드 이며 아래 보시면 있습니다.-----");
         System.out.println("---- 매개변수 넘길 때 다형성 활용 -----");
         test(student);      // 지금은 상속관계이므로 가능
         test(professor);    // 지금은 상속관계이므로 가능
 
-        System.out.println("--- 주석을 풀기전 에러가 나는지, 에러가안난다면 내용 예상해보기 ---");
-//        test(person);
-//        test(person2);
+        System.out.println("--- 주석을 풀기전 에러가 나는지, 에러가안난다면 왜 안나는지 내용 예상해보기 ---");
+//        test(person);     // 맨위의 => Person person = new Student("1111", "김학생", 23, 4);
+//        test(person2);    // 맨위의 => Person person2 = new Professor("1111", "김교수", 23, "G101");
 
     }
 
