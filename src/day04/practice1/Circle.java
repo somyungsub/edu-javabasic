@@ -11,15 +11,11 @@ public class Circle extends Shape implements Movable {
     }
 
     public double getArea() {
-        double result = 0.0;
-        result = radius * radius * Math.PI;
-        return result;
+        return radius * radius * Math.PI;
     }
 
     public double getCircumference() {
-        double result = 0.0;
-        result = 2 * radius * Math.PI;
-        return result;
+        return 2 * radius * Math.PI;
     }
 
     public void move(int x, int y) {

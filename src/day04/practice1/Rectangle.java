@@ -11,15 +11,11 @@ public class Rectangle extends Shape implements Movable {
     }
 
     public double getArea() {
-        double result = 0.0;
-        result = width * width;
-        return result;
+        return width * width;
     }
 
     public double getCircumference() {
-        double result = 0.0;
-        result = (2 * width) + (2 * width);
-        return result;
+        return (2 * width) + (2 * width);
     }
 
     public void move(int x, int y) {
