@@ -7,12 +7,12 @@ public class CharDisplay extends AbstractDisplay {
 
     private char ch;    // 출력할 문자
 
-    // 생성자를 통해 문자 전달
+    // 생성자를 통해 문자 초기화
     public CharDisplay(char ch) {
         this.ch = ch;
     }
 
-    // 기능구현
+    // 기능구현 - 오버라이딩
     @Override
     public void open() {
         System.out.print("<<");

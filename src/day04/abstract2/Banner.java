@@ -1,7 +1,7 @@
 package day04.abstract2;
 
 /*
-    기존에 제공있던 클래스
+    기존에 제공되어 있던 클래스
  */
 public class Banner {
     private String string;  // 해당문자열
