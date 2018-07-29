@@ -2,7 +2,7 @@ package homework.day03.h06;
 
 public class StudentTest {
     public static void main(String[] args) {
-        Student studentArray [] = new Student[3];
+        Student[] studentArray = new Student[3];
 
         // 객체생성
         studentArray[0] = new Student("홍길동", 15, 171, 81);

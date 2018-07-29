@@ -48,24 +48,24 @@ public class Ramyeon {
 
 
     // 공통메서드로 하위클래스에서 호출하여 활용
-//    protected void explainRamyeon() {
-//        if ("신라면".equals(name)) {
-//            System.out.println("신라면은 맵습니다....추가재료를 넣으면 괜찮아 질겁니다.");
-//
-//            // 추가재료에 따른 추가 내용 처리
-//            if (addItemFlg) {
-//                System.out.println("추가재료를 넣으셨네요! 추가재료를 넣어서 덜 매워졌습니다.");
-//            }
-//        } else if ("안성탕면".equals(this.name)) {  // this 키워드는 자기자신의 객체를 가르킵니다.
-//            System.out.println("안성탕면은 무난합니다.");
-//        } else if ("삼양라면".equals(name)) {
-//            System.out.println("삼양라면은 무난합니다. 제가 제일 좋아하는 라면입니다!");
-//            if (addItemFlg) {
-//                System.out.println("역시 추가재료는 필수! 무조건 넣어서 먹어야해요");
-//            } else {
-//                System.out.println("삼양라면은 추가재료를 무조건 넣어주셔야 맛있습니다!! 꼭 넣어 드셔보세요");
-//            }
-//        }
-//
-//    }
+    protected void explainRamyeon() {
+        if ("신라면".equals(name)) {
+            System.out.println("신라면은 맵습니다....추가재료를 넣으면 괜찮아 질겁니다.");
+
+            // 추가재료에 따른 추가 내용 처리
+            if (addItemFlg) {
+                System.out.println("추가재료를 넣으셨네요! 추가재료를 넣어서 덜 매워졌습니다.");
+            }
+        } else if ("안성탕면".equals(this.name)) {  // this 키워드는 자기자신의 객체를 가르킵니다.
+            System.out.println("안성탕면은 무난합니다.");
+        } else if ("삼양라면".equals(name)) {
+            System.out.println("삼양라면은 무난합니다. 제가 제일 좋아하는 라면입니다!");
+            if (addItemFlg) {
+                System.out.println("역시 추가재료는 필수! 무조건 넣어서 먹어야해요");
+            } else {
+                System.out.println("삼양라면은 추가재료를 무조건 넣어주셔야 맛있습니다!! 꼭 넣어 드셔보세요");
+            }
+        }
+
+    }
 }

@@ -1,4 +1,4 @@
-package homework.day03.h1;
+package homework.day03.extendCar;
 
 public class Vehicle {
     private int maxWeight;      // 최대 적재 중량

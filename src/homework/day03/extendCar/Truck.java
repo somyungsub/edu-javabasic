@@ -1,4 +1,4 @@
-package homework.day03.h1;
+package homework.day03.extendCar;
 
 public class Truck extends Car {
     

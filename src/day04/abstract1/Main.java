@@ -1,11 +1,10 @@
 package day04.abstract1;
 
-/*
-    동적 바인딩
- */
 public class Main {
     public static void main(String[] args) {
         /*
+            추상클래스 연습
+
             부모  Shape   (일반, 상위개념) - 추상클래스
             자식  Rectangle, Triangle (구체적, 하위개념)
 
@@ -26,14 +25,6 @@ public class Main {
         // 상위클래스 Shape의 형식과 변수하나로 내용을 처리합니다.
         // 여기에서는 하위클래스를 생성하는 부분만 분기처리를 하면 나머지 실행은 Shape로 처리할 수 있음을 의미합니다.
 
-//        Shape ss;
-//        if (ss instanceof Triangle) {
-//            ss = new Triangle();
-//        } else {
-//            ss = new Rectangle();
-//        } else{
-//                ss = null;
-//        }
 
         /*
             다형성의 예
@@ -52,6 +43,8 @@ public class Main {
              - 즉 Shape형 변수 1개만으로 하위클래스의 생성만 구분해주면 동일한 처리 작업이 가능해짐
              - 이부분이 이해가 안되시면 꼭 질문주시기 바랍니다!
          */
+
+
 //        shape1.area();  // 사각형 널이구하기가 호출되
 //        shape2.area();  // 삼각형 넓이구하기가 호출됨
 
@@ -75,6 +68,8 @@ public class Main {
 //                return point.getY() * point.getX() * 4;
 //            }
 //        };
+
+
 //        System.out.println(shape.area());
     }
 

@@ -12,7 +12,6 @@ package day04.abstract2;
 public class PrintBanner extends Print {
 
     private Banner banner;  // 위임된 클래스
-
     public PrintBanner(String string) {
         banner = new Banner(string);
     }

@@ -19,10 +19,24 @@ package day04.exam.interface0;
       2) alt + insert -> implement methods 또는 override methods 클릭 후 구현 메서드 클릭
       3) 오른쪽 마우스 -> Generate -> implement methods 또는 override methods 클릭 후 구현 메서드 클릭
  */
-public class InterfaceImpl implements InterfaceA {
+
+
+// 다중 참조가능
+public class InterfaceImpl02 implements InterfaceA, InterfaceC, InterfaceB {
+
     @Override
     public void testA() {
         System.out.println("구현체에서 testA 오버라이딩!!");
+    }
+
+    @Override
+    public void testB() {
+        System.out.println("구현체에서 testB 오버라이딩");
+    }
+
+    @Override
+    public void testC() {
+        System.out.println("구현체에서 testC 오버라이딩");
     }
 
 }

@@ -9,6 +9,9 @@ package day04.abstract1;
 public abstract class Shape {
     protected Point point;
 
+    public Shape() {
+
+    }
     public Shape(Point point) {
         this.point = point;
     }

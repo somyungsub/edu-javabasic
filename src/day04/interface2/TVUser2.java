@@ -1,5 +1,7 @@
 package day04.interface2;
 
+import java.util.Scanner;
+
 public class TVUser2 {
     public static void main(String[] args) {
 
@@ -22,7 +24,8 @@ public class TVUser2 {
             이런 디자인 패턴은 지금 처럼 메모리의 효율적인 관리와 유지보수성 때문에 선대 개발자들이 만들어준 값진 산출물이라 생각하시면 됩니다.
          */
 
-//        TV tv = BeanFactory.getBean(args[0]);           // 사용자 입력에 따라 생성의 역할을 위임
+//        Scanner scanner = new Scanner(System.in);
+//        TV tv = BeanFactory.getBean(scanner.next());           // 사용자 입력에 따라 생성의 역할을 위임
 //        tv.powerOn();
 //        tv.powerOff();
 //        tv.volumeUp();

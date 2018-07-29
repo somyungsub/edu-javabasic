@@ -1,4 +1,4 @@
-package day03.singleton;
+package day04.singleton;
 
 /*
     싱글턴 패턴

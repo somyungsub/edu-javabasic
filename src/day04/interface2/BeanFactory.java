@@ -16,7 +16,6 @@ public class BeanFactory {
          - 이유는  ->  TvUser2 참조
      */
     public TV getBean(String beanName) {
-
         /*
             지금은 하위클래스가 SamsungTV, LgTV 2개이지만 애플TV, 구글TV .... 더 필요하다는 요청이 들어오면 ??
             이부분에서는 else if를 추가하여 new 생성자() 를 추가해주면 되겠죠??
@@ -25,9 +24,10 @@ public class BeanFactory {
             return new SamsungTV();
         } else if ("lg".equals(beanName)) {
             return new LgTV();
+        }else if ("apple".equals(beanName)) {
+            return new AppleTV();
         } else {
             return null;    // 반환된 객체가 아무것도 없다는 의미입니다. 즉 주소값이 없는 데이터를 넘기게 됩니다.
         }
     }
-
 }
