@@ -1,4 +1,4 @@
-package test;
+package day05.test;
 
 public interface TV {
     void powerOn();

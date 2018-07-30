@@ -1,4 +1,4 @@
-package test;
+package day05.test;
 
 public class TVTest {
     public static void main(String[] args) {

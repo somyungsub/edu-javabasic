@@ -16,9 +16,9 @@ public class Main {
              -> 멤버변수 d는 접근이 안됩니다 -> 이유는?? 힌트 접근지정자를 잘 살펴보세요
          */
         System.out.println("---------------멤버변수-----------------");
-        System.out.println("test a (public) : " + test.a);
-        System.out.println("test b (protected) : " + test.b);
-        System.out.println("test c (생략 : default): " + test.c);
+        System.out.println("day05.test a (public) : " + test.a);
+        System.out.println("day05.test b (protected) : " + test.b);
+        System.out.println("day05.test c (생략 : default): " + test.c);
         System.out.println("--------------------------------");
 
         // test2는 매개변수 2개를 넘겼습니다. 각각 데이터 예상해보기
@@ -33,20 +33,20 @@ public class Main {
         System.out.println(Test01.classVariable);       // 클래스 변수 접근 -> 초기화를 안했기때문에 0이 디폴트 셋팅됩니다.
         System.out.println(Test01.classVariable2);      // classVariable과 classVariable2 위에 마우스를 올려놓고 F2키를 눌러보세요.   classVariable는 javadoc 주석을 해놔서 설명글이 나옵니다!
 
-        System.out.println("test classVariable : " + test.classVariable);
+        System.out.println("day05.test classVariable : " + test.classVariable);
         System.out.println("test2 classVariable : " + test2.classVariable);
 
         // test가 classVariable에 접근하여 1증가
         test.classVariable++;
 
-        System.out.println("test classVariable : " + test.classVariable);       // 예상해보기
+        System.out.println("day05.test classVariable : " + test.classVariable);       // 예상해보기
         System.out.println("test2 classVariable : " + test2.classVariable);     // 예상해보기
-        System.out.println("클래스변수는 클래스간 메모리를 공유하기 때문에 생성된 객체(test or test2)가 접근하여 데이터를 변경하면 모든 객체에 영향을 미치게 됩니다!");
+        System.out.println("클래스변수는 클래스간 메모리를 공유하기 때문에 생성된 객체(day05.test or test2)가 접근하여 데이터를 변경하면 모든 객체에 영향을 미치게 됩니다!");
 
         // test2가 classVariable에 접근하여 1증가
         System.out.println("--------------------------------");
         test2.classVariable++;
-        System.out.println("test classVariable : " + test.classVariable);       // 예상해보기
+        System.out.println("day05.test classVariable : " + test.classVariable);       // 예상해보기
         System.out.println("test2 classVariable : " + test2.classVariable);     // 예상해보기
 
         /*
@@ -83,9 +83,9 @@ public class Main {
               ex) 매개변수 2개로 더하기, 3개로 더하기, 4개 더하기 ... 더하기 작업을 매개변수 받는 수에 따라 동일 작업을 해야하는 경우
          */
         System.out.println("---------------오버로딩 메서드-----------------");
-//        test.overLoadMethod();
-//        test.overLoadMethod(10, 20);
-//        test.overLoadMethod(10, "아무개");
+//        day05.test.overLoadMethod();
+//        day05.test.overLoadMethod(10, 20);
+//        day05.test.overLoadMethod(10, "아무개");
 
         // plus 오버로딩
         System.out.println("---------------오버로딩 메서드2-----------------");

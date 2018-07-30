@@ -26,7 +26,7 @@ public abstract class AbstractClass {
     public abstract void testOverride();    // 추상메서드를 만들면 무조건
 
     public void test() {
-        System.out.println("나는 상위클래스 AbstractClass에서 구현한 test 메서드!");
+        System.out.println("나는 상위클래스 AbstractClass에서 구현한 day05.test 메서드!");
         System.out.println("추상메서드는 구현이 안되어 있고 정의만 해놓음 -> 하위에서 저 구조대로 구현을 하게 한다!(오버라이딩)");
     }
 

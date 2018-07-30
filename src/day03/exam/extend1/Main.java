@@ -39,15 +39,15 @@ public class Main {
         test(professor);    // 지금은 상속관계이므로 가능
 
         System.out.println("--- 주석을 풀기전 에러가 나는지, 에러가안난다면 왜 안나는지 내용 예상해보기 ---");
-//        test(person);     // 맨위의 => Person person = new Student("1111", "김학생", 23, 4);
-//        test(person2);    // 맨위의 => Person person2 = new Professor("1111", "김교수", 23, "G101");
+//        day05.test(person);     // 맨위의 => Person person = new Student("1111", "김학생", 23, 4);
+//        day05.test(person2);    // 맨위의 => Person person2 = new Professor("1111", "김교수", 23, "G101");
 
     }
 
     /*
         상위 instanceof 하위
          - 상위클래스에 담긴 자식클래스가 어떤 것 인지 판별을 하는 예약어
-         - test 메서드에 매개변수를 유심히 지켜보시기 바랍니다.
+         - day05.test 메서드에 매개변수를 유심히 지켜보시기 바랍니다.
          - 만약 매개변수 타입이 Person이 아닌 Student나 Professor 이었다면 어땠을까요??
            해당 클래스만 받아서 활용해야 하며, Student로 해놓고 Professor을 또 필요로 한다면...
            타입별로 메서드를 다르게 구성해야 하는 경우가 발생 할 수도 있습니다.
@@ -121,7 +121,7 @@ public class Main {
 
 
     // 리팩토링 -> 중복코드 통일
-//    private static void test(Person pr) {
+//    private static void day05.test(Person pr) {
 //
 //        // 상위클래스 내용 확인
 //        System.out.println("이름 : " + pr.getName());
