@@ -1,8 +1,4 @@
-package day05.set;
-
-import test.LgTV;
-import test.SamsungTV;
-import test.TV;
+package day05.collection.set;
 
 import java.util.ArrayList;
 import java.util.HashMap;

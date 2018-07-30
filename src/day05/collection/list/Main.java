@@ -1,7 +1,6 @@
-package day05.list;
+package day05.collection.list;
 
 
-import test.LgTV;
 import test.SamsungTV;
 import test.TV;
 
