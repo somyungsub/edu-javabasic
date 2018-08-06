@@ -19,7 +19,7 @@ public class Main {
 
             자주 보시게 될 베스트 예외
              1. NullPointerException
-              - 참조변수가 null 이거나 객체가 null 인데, 이변수와 객체를 참조하여 메서드를 실행하거나 어떤 작업을 하려고 하면
+              - 객체가 null 인 경우 이 객체를 참조하여 메서드를 실행하거나 어떤 작업을 하려고 하면
                 예외가 발생하게 됩니다.
 
              2. ArrayIndexOutOfBoundsException
@@ -34,7 +34,7 @@ public class Main {
             System.out.println(s.concat("안녕").concat("하세요"));
             System.out.println("변수s는 new 연산자를 통해 객체를 생성하여 Heap 메모리에서 주소 값을 가지고 있습니다");
             String s2 = null;
-            s2.concat("aaa");   // 코드상에는 문법적 에러가 없으나  null객체를 참조하여 메서드를 이용하려고 하기때문에 시스템적 버그입니다. -> 예외발생대상
+            s2.concat("aaa");   // 코드상에는 문법적 에러가 없으나  null객체를 참조하여 메서드를 이용하려고 하기때문에 어플리케이션 내부 버그입니다. -> 예외발생대상
             System.out.println(s2.toString());
         } catch (Exception e) {
             System.out.println("----- 예외 실행 ------");
@@ -53,9 +53,6 @@ public class Main {
             System.out.println("즉 예외와 상관없이 무조건 실행이 필요한 경우에 여기서 코드작성을 하면됩니다");
             System.out.println("또한 지금 문장은 필수가 아니고 선택이기 때문에 주석처리를 하셔도 문법적 에러가 발생하지 않습니다!");
         }
-
-
-
 
     }
 }

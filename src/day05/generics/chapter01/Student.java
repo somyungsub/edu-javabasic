@@ -34,21 +34,4 @@ public class Student<T> {
         this.item = item;
     }
 
-//    public Student() {
-//        Class<T> clzz = (Class<T>);
-//        ClassLoader cl = ClassLoader.getSystemClassLoader();
-//        System.out.println("clzz.getTypeName() : " + clzz.getTypeName());
-//        try {
-//            this.item = (T) cl.loadClass(clzz.getTypeName()).newInstance();
-//        } catch (InstantiationException e) {
-//            e.printStackTrace();
-//        } catch (IllegalAccessException e) {
-//            e.printStackTrace();
-//        } catch (ClassNotFoundException e) {
-//            e.printStackTrace();
-//        }
-//
-//
-//    }
-
 }

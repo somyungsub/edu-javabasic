@@ -13,7 +13,7 @@ public class UtilClass {
         - 모든타입 가능
      */
     public static <T> void print(T[] arr) {
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         for (T t : arr) {
             sb.append(t).append("\t");
         }
@@ -47,17 +47,16 @@ public class UtilClass {
 
           다 잊어버리셔도 다형성, 오버라이딩, 동적바인딩 이 3가지 개념은 절대 잊으시면 안됩니다.
      */
-    public static <K, V, T> T convertMapToObject(Map<K, V> map, Class<T> type) {
+    public static <V, T> T convertMapToObject(Map<? super String, V> map, Class<T> type) {
         Object obj = null;  // 반환대상
         try {
             // Class.forName(타입이름)은 해당패키지에서 클래스를 찾아 클래스를 반환하며, 반환과 동시에 클래스의 메서드 newInstance()를 통해 객체를 생성
             obj = Class.forName(type.getTypeName()).newInstance();
-
             // 생성된 객체 obj의 정보 중 getDeclaredFields를 통해 필드정보(멤버변수)를 for문을 통해 순회
             for (Field field : obj.getClass().getDeclaredFields()) {
 
                 // field.getName()를 통해 변수명을 얻음. 현재 Test클래스에서는 name, age, weight 변수명을 얻게 됨
-                String  key = ((K)field.getName()).toString();  // Map 저장된 키
+                String  key = field.getName();  // Map 저장된 키
                 V value = map.get(key);                         // Map 저장된 키의 값
 
                 // map의 메서드 중 containsKey(값)을 통해 map에 해당 값의 키가 있는지를 체크! 키가있으면 다음 로직 수행
@@ -83,7 +82,7 @@ public class UtilClass {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return (T) obj;
+        return (T)obj;
     }
 
     /*
