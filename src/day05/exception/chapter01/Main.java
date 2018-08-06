@@ -1,7 +1,4 @@
-package day05.exception;
-
-import java.util.ArrayList;
-import java.util.List;
+package day05.exception.chapter01;
 
 public class Main {
     public static void main(String[] args) {
