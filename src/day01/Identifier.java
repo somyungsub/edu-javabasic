@@ -100,6 +100,9 @@ public class Identifier {
         boolean bool2 = false;
         System.out.println("bool1 : " + bool1);
         System.out.println("bool2 : " + bool2);
+        
+        
+        
 
         /*
             문자형 - > 2바이트 / C언어는 1바이트
